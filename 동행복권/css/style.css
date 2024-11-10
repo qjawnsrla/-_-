@@ -1,0 +1,1101 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", 돋움, Dotum,
+    sans-serif;
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  /* max-height: 110px; */
+  margin: 0 auto;
+  padding: 24px 0px 24px;
+}
+
+.n1 {
+  padding: 15px 20px;
+  width: 232px;
+  height: 40px;
+  text-align: left;
+  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "돋움", Dotum,
+    sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  letter-spacing: -0.05em;
+  background: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 1em;
+  position: relative;
+}
+.h2 {
+  font-weight: lighter;
+}
+
+.logo-img {
+  max-height: 65px;
+  max-width: 190px;
+  background: no-repeat center center;
+  background-size: cover;
+  display: block;
+}
+
+.user-links {
+  display: flex;
+  align-items: center;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+  list-style: none;
+}
+
+.user-links .btn {
+  padding: 5px 10px;
+  border: none;
+  font-size: 0.9em;
+  cursor: pointer;
+  margin-right: 5px;
+  height: auto; /* 버튼 높이 자동 조정 */
+}
+
+.user-links .divider {
+  margin: 0 10px; /* 좌우 공백을 10px로 설정 */
+  color: #666; /* 구분선 색상 */
+  font-size: 11px; /* 글자 크기 조정 */
+  vertical-align: middle; /* 가운데 정렬 */
+  gap: 10px;
+}
+
+.btn_common {
+  display: inline-block;
+  box-sizing: border-box;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid #ddd;
+  background: #f5f5f5;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 67px;
+}
+
+.login-btn,
+.signup-btn,
+.mypage-btn,
+.support-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 0 9px; /* 내부 여백 조정 */
+  height: 23px; /* 버튼 높이를 30px로 통일 */
+  line-height: normal;
+  font: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", 돋움, Dotum, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
+
+.login-btn {
+  min-width: 67px;
+  background-color: #666666;
+}
+.signup-btn {
+  min-width: 67px;
+  background-color: #007bc3;
+}
+.mypage-btn,
+.support-btn {
+  background-color: #0a857e;
+}
+
+.main-nav {
+  max-width: 100%;
+  height: 62px;
+  background-color: white;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 3px solid #007bc3; /* 파란색 줄 추가 */
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: space-between; /* 양쪽 끝에 spacer를 고정하여 중앙 정렬 */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 100%; /* 전체 너비를 가득 채우도록 설정 */
+}
+
+.main-nav ul li {
+  max-width: 161.45px; /* 각 항목의 최대 너비를 161.45px로 설정 */
+}
+
+.main-nav ul li:not(.spacer) {
+  flex: 1 1 161.45px; /* 항목 너비를 최대 161.45px로 제한하고 flex-grow와 shrink 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.main-nav ul li.spacer {
+  flex: 1; /* 남은 공간을 균등하게 차지하게 설정 */
+  max-width: unset; /* spacer에는 최대 너비 제한을 없앰 */
+}
+
+.main-nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  color: #333;
+  text-decoration: none;
+  font: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", 돋움, Dotum, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  padding: 20px 0px;
+  transition: background-color 0.3s;
+}
+
+.main-nav ul li a:hover {
+  background-color: #007bc3;
+  color: white;
+}
+
+.container-wrap {
+  width: 1310px;
+  height: 1832px;
+  padding-bottom: 30px;
+}
+
+/* Main Content */
+.lottery-container {
+  display: flex;
+  height: 425px;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 4.3%;
+  margin-bottom: 1.5%;
+}
+
+.interview-container {
+  display: flex;
+  max-width: 100%;
+  height: 300px;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 1.5%;
+  background-image: url("../images/bg_interview.jpg");
+  z-index: 1;
+}
+
+.color {
+  color: #ffc94e;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.color_2 {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  text-overflow: ellipsi;
+  font-weight: 300;
+  margin: -5px;
+}
+
+.interview-view {
+  min-width: 20%;
+  padding: 0;
+}
+
+.interview-info-1 {
+  flex: 1;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.interview-info-2 {
+  flex: 1;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.interview-info-3 {
+  flex: 1;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.view-all-button {
+  background-color: #044676;
+  color: white;
+  width: 170px; /* 버튼의 너비 고정 */
+  padding: 7px 0; /* 좌우 여백 제거, 상하 여백 조정 */
+  border: none;
+  border-radius: 0%;
+  font-size: 0.9em;
+  text-align: center; /* 글씨 중앙 정렬 */
+  cursor: pointer;
+  white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+  margin: 40px;
+  margin-top: 60px;
+}
+
+.interview-cards {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  z-index: 2;
+}
+
+.interview-card {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 10px;
+  z-index: 2;
+}
+
+.interview-card img {
+  width: 100%;
+  height: 200px; /* 원하는 높이 설정 */
+  object-fit: cover; /* 이미지를 컨테이너에 맞게 채움 */
+  margin-bottom: 10px;
+  border: 1px solid white;
+  z-index: 2;
+}
+
+.lottery-info,
+.pension-lottery,
+.instant-lottery {
+  flex: 1;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.lottery-info {
+  background: #227dbd;
+  max-width: 26%;
+  padding: 0;
+}
+
+.lottery-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #227dbd;
+  overflow: hidden;
+}
+
+.lottery-carousel-container {
+  width: 100%;
+  text-align: center;
+}
+
+.lottery-carousel-container img {
+  width: 100%;
+  height: auto;
+}
+
+.lottery-info .left-btn,
+.lottery-info .right-btn {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2; /* 버튼이 이미지 위에 위치 */
+}
+
+.lottery-info .left-btn {
+  left: 10px;
+  background-image: url("../images/left.png"); /* 왼쪽 버튼 이미지 경로 */
+}
+
+.lottery-info .right-btn {
+  right: 0px;
+  background-image: url("../images/right.png"); /* 오른쪽 버튼 이미지 경로 */
+}
+
+.lottery-info {
+  position: relative;
+}
+
+.lottery-buttons {
+  position: absolute;
+  bottom: 30px; /* 이미지 하단에서 약간 띄워서 배치 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0px;
+}
+
+.lottery-buttons .result-btn,
+.lottery-buttons .buy-btn {
+  width: 110px; /* 버튼의 너비 고정 */
+  padding: 7px 0; /* 좌우 여백 제거, 상하 여백 조정 */
+  border: none;
+  border-radius: 0%;
+  font-size: 0.9em;
+  text-align: center; /* 글씨 중앙 정렬 */
+  cursor: pointer;
+  white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+}
+
+.lottery-buttons .result-btn {
+  background-color: #444444;
+  color: white;
+}
+
+.lottery-buttons .buy-btn {
+  background-color: #0a857e;
+  color: white;
+}
+
+.pension-lottery {
+  background: #2c6c9b;
+  padding: 0;
+}
+
+.pension-lottery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2c6c9b;
+  overflow: hidden;
+}
+
+.pension-carousel-container {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.pension-carousel-container img {
+  width: 100%;
+  height: auto;
+}
+
+.pension-lottery .left-btn,
+.pension-lottery .right-btn {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2; /* 버튼이 이미지 위에 위치 */
+}
+
+.pension-lottery .left-btn {
+  left: 10px;
+  background-image: url("../images/left.png"); /* 왼쪽 버튼 이미지 경로 */
+}
+
+.pension-lottery .right-btn {
+  right: 0px;
+  background-image: url("../images/right.png"); /* 오른쪽 버튼 이미지 경로 */
+}
+
+.pension-lottery {
+  position: relative;
+}
+
+.pension-buttons {
+  position: absolute;
+  bottom: 30px; /* 이미지 하단에서 약간 띄워서 배치 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0px;
+}
+
+.pension-buttons .interview-btn,
+.pension-buttons .result-btn,
+.pension-buttons .buy-btn {
+  width: 170px; /* 버튼의 너비 고정 */
+  padding: 7px 0; /* 좌우 여백 제거, 상하 여백 조정 */
+  border: none;
+  border-radius: 0%;
+  font-size: 0.9em;
+  text-align: center; /* 글씨 중앙 정렬 */
+  cursor: pointer;
+  white-space: nowrap; /* 텍스트가 줄바꿈되지 않도록 설정 */
+}
+
+.pension-buttons .interview-btn {
+  background-color: #2f516a;
+  color: white;
+}
+
+.pension-buttons .result-btn {
+  background-color: #444444;
+  color: white;
+}
+
+.pension-buttons .buy-btn {
+  background-color: #0a857e;
+  color: white;
+}
+
+.instant-lottery {
+  background: #5e7bc1;
+  max-width: 24%;
+  padding: 0;
+}
+
+.instant-lottery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-container {
+  width: 95%; /* 슬라이드 전체 너비 */
+  overflow: hidden; /* 넘치는 이미지 숨김 */
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-wrapper a {
+  flex: 0 0 100%; /* 각 이미지가 슬라이드 컨테이너 너비의 100%를 차지 */
+  display: block;
+}
+
+.carousel-wrapper img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.instant-lottery .left-btn,
+.instant-lottery .right-btn {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2; /* 버튼이 이미지 위에 위치 */
+}
+
+.instant-lottery .left-btn {
+  left: 10px;
+  background-image: url("../images/left.png"); /* 왼쪽 버튼 이미지 경로 */
+}
+
+.instant-lottery .right-btn {
+  right: 0px;
+  background-image: url("../images/right.png"); /* 오른쪽 버튼 이미지 경로 */
+}
+
+.letter {
+  font-size: 18px;
+  font-weight: normal;
+  color: #333;
+  padding: 20px;
+  margin-left: 10px;
+}
+
+.letter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plus-link {
+  font-size: 20px; /* Adjust size as necessary */
+  font-weight: light;
+  color: #999; /* Adjust color as necessary */
+  text-decoration: none;
+  margin-right: 4%;
+}
+
+.digital-container {
+  display: flex;
+  height: 360px;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 1.7%;
+  margin-bottom: 1.5%;
+  border: 0.5px solid #999999;
+  background-image: none;
+  background-color: none;
+  z-index: 1;
+}
+
+.digital-f {
+  min-width: 76.5%;
+  padding: 0;
+}
+
+.digital-letter {
+  min-height: 17%;
+  max-width: 100;
+}
+
+.digital-link {
+  min-height: 83%;
+  max-width: 100;
+}
+.digital-link .game-links-row {
+  display: flex;
+  margin-top: 0%;
+  margin-left: 0%;
+  margin-bottom: 2%;
+}
+
+.digital-link .game-set {
+  max-width: 21.1%;
+  text-align: center;
+  margin-left: 3%;
+  margin-bottom: 1%;
+}
+
+.digital-link .game-set img {
+  margin: 0%;
+  width: 100%; /* 이미지 너비를 세트 컨테이너에 맞춤 */
+  height: auto; /* 이미지 높이 자동 조정 */
+  cursor: pointer;
+}
+
+.digital-link .game-set button {
+  width: 100%; /* 버튼을 이미지 너비의 대부분에 맞게 조절 */
+  padding: 7px;
+  background-color: #0a857e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: -2%;
+}
+
+.game-set img {
+  display: block; /* 이미지와 버튼 사이의 간격을 제거 */
+  width: 100%; /* 이미지의 너비를 세트 컨테이너에 맞춤 */
+  height: auto; /* 이미지 높이 자동 조정 */
+  margin-bottom: -5px; /* 이미지와 버튼 사이의 간격을 제거 */
+}
+
+.game-set button {
+  width: 100%; /* 버튼을 이미지 너비의 대부분에 맞게 조절 */
+  padding: 7px;
+  background-color: #0a857e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 0; /* 버튼의 상단 여백 제거 */
+}
+
+.digital-money {
+  min-width: 23.5%;
+  height: auto; /* 섹션의 높이를 자동으로 조정 */
+  display: flex; /* flexbox 레이아웃 사용 */
+  justify-content: center; /* 가운데 정렬 */
+  align-items: center; /* 세로 방향으로 가운데 정렬 */
+  overflow: hidden; /* 이미지가 넘칠 경우 숨김 */
+  padding: 0;
+  background-color: #fafafa;
+  border-left: 0.5px solid #999999;
+  z-index: 2;
+}
+
+.digital-money img {
+  width: 100%; /* 이미지 너비를 섹션 너비에 맞춤 */
+  height: auto; /* 이미지 높이를 자동 조정 */
+}
+
+.final-container {
+  display: flex;
+  height: 427px;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 1.7%;
+  margin-bottom: 1.5%;
+  border: 0.5px solid #999999;
+  background-image: none;
+  background-color: none;
+  z-index: 1;
+}
+.final-notice {
+  min-width: 26.5%;
+  max-width: 26.5%;
+  border-right: 0.5px solid #999999;
+}
+
+.final-notice {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Adjust the height based on content */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  overflow: hidden; /* Prevents overflow out of the section boundaries */
+}
+
+.final-notice a {
+  display: block; /* Makes the link behave like a block element */
+  max-width: 100%; /* Restrains the image to the section's width */
+}
+
+.final-notice img {
+  width: 100%; /* Makes the image fully responsive within the container */
+  height: auto; /* Keeps the aspect ratio of the image */
+  display: block; /* Prevents extra space under the image */
+}
+
+.final-money {
+  min-width: 26.6%;
+  max-width: 26.6%;
+  border-right: 0.5px solid #999999;
+}
+.final-money-1 {
+  min-height: 73%;
+  border-bottom: 0.5px solid #999999;
+}
+.final-money-2 {
+  min-height: 27%;
+}
+
+.final-money-1 {
+  position: relative; /* 상대적 위치 설정 */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlay-text {
+  position: absolute; /* 절대 위치 설정 */
+  bottom: 6.3%; /* 이미지 하단에서 10px 위 */
+  right: -12%; /* 센터 정렬을 위해 왼쪽에서 50% */
+  transform: translateX(-50%); /* 센터 정렬을 위해 자신의 너비의 50%만큼 이동 */
+  padding-right: 20px;
+  color: #444;
+  text-decoration: none;
+  font: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "돋움", Dotum, sans-serif;
+  font-size: 14px;
+  white-space: nowrap; /* 텍스트가 줄바꿈 되지 않도록 설정 */
+  z-index: 2;
+}
+
+.final-money-1,
+.final-money-2 {
+  width: 100%; /* 섹션의 너비를 100%로 설정 */
+  height: auto; /* 이미지 높이 자동 조정 */
+  display: flex; /* flexbox 레이아웃 사용 */
+  justify-content: center; /* 가운데 정렬 */
+  align-items: center; /* 세로 방향으로 가운데 정렬 */
+  overflow: hidden; /* 이미지가 넘칠 경우 숨김 */
+  padding: 0;
+}
+
+.final-money-1 img,
+.final-money-2 img {
+  width: 100%; /* 이미지의 너비를 섹션 너비에 맞춤 */
+  height: auto; /* 이미지 높이 자동 조정 */
+  display: flex; /* flexbox 레이아웃 사용 */
+  justify-content: center; /* 가운데 정렬 */
+  align-items: center; /* 세로 방향으로 가운데 정렬 */
+  overflow: hidden; /* 이미지가 넘칠 경우 숨김 */
+  padding: 0;
+  z-index: 1;
+}
+
+.final-link {
+  min-width: 23.5%;
+  max-width: 23.5%;
+  border-right: 0.5px solid #999999;
+}
+.final-link {
+  background-image: url(../images/링크모음.png);
+  background-size: 100%;
+  width: 100%; /* 섹션의 너비를 100%로 설정 */
+  height: auto; /* 섹션의 높이를 이미지에 맞춤 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 이미지가 넘칠 경우 숨김 */
+  flex-direction: column; /* 자식 요소를 수직으로 쌓음 */
+  pointer-events: none; /* 상위 요소에서 이벤트 차단 */
+}
+
+.final-link img {
+  width: 100%; /* 이미지의 너비를 섹션 너비에 맞춤 */
+  height: auto; /* 이미지 높이 자동 조정 */
+  z-index: 1;
+}
+
+.final-link > section {
+  width: 100%; /* Full width of the parent container */
+  height: 16.66%; /* Each section takes an equal part of the vertical space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures no spilling out */
+}
+
+.img-tag {
+  pointer-events: auto;
+}
+
+.final-link-cafe,
+.final-link-blog,
+.final-link-facebook,
+.final-link-youtube,
+.final-link-news,
+.final-link-app {
+  flex: 1; /* 각 자식 요소가 동등한 공간을 차지함 */
+  display: flex; /* 내용을 중앙에 위치시키기 위해 사용 */
+  justify-content: center; /* 내용을 수평 중앙에 위치 */
+  align-items: center; /* 내용을 수직 중앙에 위치 */
+  /* border-bottom: 0.5px solid #999999; 각 항목 사이에 구분선을 추가 (선택사항) */
+  z-index: 2;
+}
+
+.final-link-cafe a {
+  z-index: 10; /* Ensures the clickable area is above other elements */
+  position: relative;
+  pointer-events: auto; /* 링크 영역은 이벤트 수용 */
+}
+
+.final-stop {
+  min-width: 23.4%;
+  max-width: 23.4%;
+  padding: 0;
+  margin: 0;
+}
+.final-stop {
+  width: 100%; /* 섹션의 너비를 100%로 설정 */
+  height: auto; /* 이미지 높이 자동 조정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 이미지가 넘칠 경우 숨김 처리 */
+}
+
+.final-stop img {
+  width: 100%; /* 이미지의 너비를 섹션 너비에 맞춤 */
+  height: auto; /* 이미지 높이 자동 조정 */
+}
+
+.result-btn,
+.buy-btn,
+.interview-btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.result-btn {
+  background-color: #555555;
+  color: white;
+}
+
+.buy-btn {
+  background-color: #007f3f;
+  color: white;
+}
+
+.certification-links {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+  border-top: none; /* Remove any top border */
+}
+
+.certification-links a {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 213px; /* Set specified width */
+  height: 40px; /* Set specified height */
+  border: 0.5px solid #ccc; /* Border around the link */
+  transition: border-color 0.3s;
+  text-decoration: none; /* Remove underline from link */
+}
+
+.certification-links img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Footer 기본 스타일 */
+.custom-footer {
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  color: #333;
+  font-size: 0.9em;
+  padding-bottom: 0; /* Remove any bottom padding in the footer */
+}
+
+.footer-top {
+  background-color: #626262;
+  color: #ffffff;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  text-align: center;
+}
+
+.footer-top nav a {
+  color: #ffffff;
+  margin: 0 22px; /* 링크 간격을 10px로 설정 */
+  text-decoration: none;
+  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", 돋움, Dotum,
+    sans-serif;
+  font-size: 15px;
+  letter-spacing: -0.05em;
+}
+
+.footer-top nav a:hover {
+  text-decoration: underline;
+  color: #ffffff; /* 색상 변화 제거 */
+}
+
+/* Footer 내용 스타일 */
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* 중앙 정렬을 위한 최대 너비 */
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 20px;
+}
+
+/* 왼쪽 섹션: 로고와 버튼 */
+.footer-left {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center align items */
+  gap: 10px; /* Add space between logo and button */
+}
+
+.footer-logo {
+  width: 86px;
+  height: 47px;
+}
+
+.info-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 5px 10px;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+/* 오른쪽 섹션: 회사 정보 */
+.footer-right {
+  color: #888;
+  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "돋움", Dotum,
+    sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  etter-spacing: -0.025em;
+  max-width: 1000px;
+  text-align: left;
+}
+
+.company-info p {
+  margin: 10px 0;
+}
+
+/* 인증 배너 이미지 */
+.certification-banner {
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  margin-top: 20px;
+}
+
+.certification-banner img {
+  width: 62%; /* 이미지가 화면의 75% 너비를 차지하도록 설정 */
+  height: auto; /* 이미지 비율 유지 */
+}
+
+@media (max-width: 768px) {
+  /* Header */
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Header */
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .logo-img {
+    width: 70%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .user-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* Navigation */
+  .main-nav {
+    padding: 10px 0;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-wrap: wrap; /* 항목이 줄 바꿈되어 정렬되도록 설정 */
+    justify-content: center; /* 항목을 가운데 정렬 */
+    gap: 8px; /* 항목 사이 간격 */
+  }
+
+  .main-nav ul li {
+    flex: 1 1 auto; /* 항목이 화면에 맞춰 크기를 조정 */
+    max-width: unset; /* 최대 너비 제한 해제 */
+    text-align: center;
+  }
+
+  .main-nav ul li a {
+    font-size: 14px; /* 모바일에 맞게 글꼴 크기 축소 */
+    padding: 10px; /* 상하 간격 축소 */
+  }
+
+  /* 메인 콘텐츠 - 각 섹션을 개별적으로 수직 배치 */
+  .lottery-info,
+  .pension-lottery,
+  .instant-lottery,
+  .interview-info-1,
+  .interview-info-2,
+  .interview-info-3 {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* 섹션 내 모든 요소가 수직으로 배치 */
+  .lottery-info > *,
+  .pension-lottery > *,
+  .instant-lottery > *,
+  .interview-info-1 > *,
+  .interview-info-2 > *,
+  .interview-info-3 > * {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  /* 이미지가 깨지지 않도록 조정 */
+  .lottery-info img,
+  .pension-lottery img,
+  .instant-lottery img,
+  .interview-info-1 img,
+  .interview-info-2 img,
+  .interview-info-3 img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 버튼 크기 조정 및 중앙 정렬 */
+  .lottery-buttons .result-btn,
+  .lottery-buttons .buy-btn,
+  .pension-buttons .interview-btn,
+  .pension-buttons .result-btn,
+  .pension-buttons .buy-btn {
+    width: 90%;
+    padding: 10px;
+    margin: 5px auto;
+    font-size: 14px;
+  }
+
+  /* Interview Section - 카드 수직 정렬 */
+  .interview-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .interview-card {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Game Links Section - 수직 정렬 */
+  .digital-link .game-links-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .digital-link .game-set {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}

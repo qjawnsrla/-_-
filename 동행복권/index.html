@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로또 사이트 클론 페이지</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-top">
+        <div class="logo-img">
+          <a href="index.html">
+            <img src="images/logo-header.png" alt="로또 로고" />
+          </a>
+        </div>
+        <div class="user-links">
+          <button class="btn login-btn">로그인</button>
+          <a
+            href="https://dhlottery.co.kr/loginJoin.do?method=joinFormAgree"
+            class="btn signup-btn"
+            >회원가입</a
+          >
+          <span class="divider"> | </span>
+          <a
+            href="https://dhlottery.co.kr/user.do?method=login&returnUrl=https%3A%2F%2Fwww.dhlottery.co.kr%2FuserSsl.do%3Fmethod%3DmyPage"
+            class="btn mypage-btn"
+            >마이페이지</a
+          >
+          <a
+            href="https://dhlottery.co.kr/counsel.do?method=callCenter"
+            class="btn support-btn"
+            >고객센터</a
+          >
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li class="spacer"></li>
+          <!-- 왼쪽 여백 -->
+          <li>
+            <a
+              href="https://dhlottery.co.kr/gameInfo.do?method=buyLotto&wiselog=C_A_1_3"
+              >복권구매</a
+            >
+          </li>
+          <li>
+            <a href="https://dhlottery.co.kr/gameInfo.do?method=gameMethod"
+              >복권정보</a
+            >
+          </li>
+          <li>
+            <a href="https://dhlottery.co.kr/gameResult.do?method=byWin"
+              >당첨결과</a
+            >
+          </li>
+          <li>
+            <a href="https://dhlottery.co.kr/store.do?method=sellerInfo645"
+              >판매점</a
+            >
+          </li>
+          <li>
+            <a href="https://dhlottery.co.kr/event.do?method=Eventend"
+              >이벤트</a
+            >
+          </li>
+          <li>
+            <a href="https://dhlottery.co.kr/counsel.do?method=knowledge"
+              >행복공감</a
+            >
+          </li>
+          <li class="spacer"></li>
+          <!-- 오른쪽 여백 -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-wrap">
+      <main class="lottery-container">
+        <!-- Lottery Information Section (로또 6/45) -->
+        <section class="lottery-info">
+          <button class="left-btn" onclick="prevLottoImage()"></button>
+          <div class="lottery-carousel-container">
+            <img
+              id="lottery-carousel-image"
+              src="images/lotto_1137.png"
+              alt="로또 1137회"
+            />
+          </div>
+          <button class="right-btn" onclick="nextLottoImage()"></button>
+          <div class="lottery-buttons">
+            <a
+              href="https://dhlottery.co.kr/gameResult.do?method=byWin&wiselog=C_A_1_2"
+              class="result-btn"
+              >회차별 당첨결과</a
+            >
+            <a
+              href="https://dhlottery.co.kr/gameInfo.do?method=buyLotto&wiselog=C_A_1_3"
+              class="buy-btn"
+              >구매하기</a
+            >
+          </div>
+        </section>
+
+        <!-- Pension Lottery Section (연금복권 720+) -->
+        <section class="pension-lottery">
+          <button class="left-btn" onclick="prevPensionImage()"></button>
+          <div class="pension-carousel-container">
+            <img
+              id="pension-carousel-image"
+              src="images/연금복권_231.png"
+              alt="연금복권 231회"
+            />
+          </div>
+          <button class="right-btn" onclick="nextPensionImage()"></button>
+          <div class="pension-buttons">
+            <a
+              href="https://dhlottery.co.kr/gameResult.do?method=highWin&wiselog=C_D_3_8"
+              class="interview-btn"
+              >당첨자 인터뷰 보기</a
+            >
+            <a
+              href="https://dhlottery.co.kr/gameResult.do?method=win720&wiselog=C_A_4_2"
+              class="result-btn"
+              >회차별 당첨결과</a
+            >
+            <a
+              href="https://dhlottery.co.kr/gameInfo.do?method=game720Method&wiselog=C_A_4_3"
+              class="buy-btn"
+              >구매하기</a
+            >
+          </div>
+        </section>
+
+        <!-- Instant Print Lottery Section (즉석식 인쇄복권) -->
+        <section class="instant-lottery">
+          <button class="left-btn" onclick="prevImage()"></button>
+          <div class="carousel-container">
+            <div class="carousel-wrapper">
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1"
+              >
+                <img src="images/spitto_1.png" alt="복권 이미지 1" />
+              </a>
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1"
+              >
+                <img src="images/spitto_2.png" alt="복권 이미지 2" />
+              </a>
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1"
+              >
+                <img src="images/spitto_3.png" alt="복권 이미지 3" />
+              </a>
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1"
+              >
+                <img src="images/spitto_4.png" alt="복권 이미지 4" />
+              </a>
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1"
+              >
+                <img src="images/spitto_5.png" alt="복권 이미지 5" />
+              </a>
+            </div>
+          </div>
+          <button class="right-btn" onclick="nextImage()"></button>
+        </section>
+      </main>
+      <!-- 인터뷰 섹션 -->
+      <main class="interview-container">
+        <section class="interview-view">
+          <button
+            class="view-all-button"
+            onclick="window.location.href='https://dhlottery.co.kr/gameResult.do?method=highWin&wiselog=C_D_3_8'"
+          >
+            인터뷰 전체보기
+          </button>
+        </section>
+        <section class="interview-info-1">
+          <div class="interview-cards">
+            <div class="interview-card">
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=highWinView&wiselog=C_C_1_1&txtNo=14763"
+              >
+                <p class="color">연급복권720+[1등]</p>
+              </a>
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=highWinView&wiselog=C_C_1_1&txtNo=14763"
+              >
+                <img src="images/연금복권_1등.png" alt="연금복권 1등 당첨" />
+              </a>
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=highWinView&wiselog=C_C_1_1&txtNo=14763"
+              >
+                <p class="color_2">남자친구와 데이트 중 산 복권 1등 당첨</p>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="interview-info-2">
+          <div class="interview-cards">
+            <div class="interview-card">
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=highWinView&wiselog=C_C_1_1&txtNo=14761"
+              >
+                <p class="color">스피또1000[1등]</p>
+              </a>
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=highWinView&wiselog=C_C_1_1&txtNo=14761"
+              >
+                <img
+                  src="images/스피또1000_1등(1명).png"
+                  alt="스피또1000 1등 당첨"
+                />
+              </a>
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=highWinView&wiselog=C_C_1_1&txtNo=14761"
+              >
+                <p class="color_2">돼지들이 뛰어와 안기는 꿈 꾸고 1등 당첨</p>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="interview-info-3">
+          <div class="interview-cards">
+            <div class="interview-card">
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=highWinView&wiselog=C_C_1_1&txtNo=14759"
+              >
+                <p class="color">스피또1000[1등]</p>
+              </a>
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=highWinView&wiselog=C_C_1_1&txtNo=14759"
+              >
+                <img
+                  src="images/스피또1000_1등(2명).png"
+                  alt="스피또1000 1등 당첨"
+                />
+              </a>
+              <a
+                href="https://dhlottery.co.kr/gameResult.do?method=highWinView&wiselog=C_C_1_1&txtNo=14759"
+              >
+                <p class="color_2">1등 당첨에 아내에게 바로 전화한 당첨자</p>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- 전자복권 섹션 -->
+      <main class="digital-container">
+        <!-- 디지털 링크 섹션 -->
+        <section class="digital-f">
+          <section class="digital-letter">
+            <div class="letter-container">
+              <p class="letter">전자복권</p>
+              <a
+                href="https://dhlottery.co.kr/gameInfo.do?method=inetbokBuyInfo"
+                class="plus-link"
+                >+</a
+              >
+            </div>
+          </section>
+          <section class="digital-link">
+            <div class="game-links-row">
+              <div class="game-set">
+                <a
+                  href="https://dhlottery.co.kr/gameInfo.do?method=game720Method&wiselog=C_B_9_1"
+                >
+                  <img src="images/link1.jpg" alt="연금복권720+" />
+                </a>
+                <button onclick="showAlertAndRedirect()">구매하기</button>
+              </div>
+              <div class="game-set">
+                <a
+                  href="https://dhlottery.co.kr/gameInfo.do?method=lottoMainView&lottoId=LD14&wiselog=C_B_2_1"
+                >
+                  <img src="images/link3.jpg" alt="Power Ball" />
+                </a>
+                <button onclick="showAlertAndRedirect()">구매하기</button>
+              </div>
+              <div class="game-set">
+                <a
+                  href="https://dhlottery.co.kr/gameInfo.do?method=lottoMainView&lottoId=LD10&wiselog=C_B_3_1"
+                >
+                  <img src="images/link5.jpg" alt="스피드 캐시" />
+                </a>
+                <button onclick="showAlertAndRedirect()">구매하기</button>
+              </div>
+              <div class="game-set">
+                <a
+                  href="https://dhlottery.co.kr/gameInfo.do?method=lottoMainView&lottoId=LD11&wiselog=C_B_4_1"
+                >
+                  <img src="images/link7.jpg" alt="Mega Bingo" />
+                </a>
+                <button onclick="showAlertAndRedirect()">구매하기</button>
+              </div>
+            </div>
+            <div class="game-links-row">
+              <div class="game-set">
+                <a
+                  href="https://dhlottery.co.kr/gameInfo.do?method=lottoMainView&lottoId=LI21&wiselog=C_B_5_1"
+                >
+                  <img src="images/link2.jpg" alt="Triple Luck" />
+                </a>
+                <button onclick="showAlertAndRedirect()">구매하기</button>
+              </div>
+              <div class="game-set">
+                <a
+                  href="https://dhlottery.co.kr/gameInfo.do?method=lottoMainView&lottoId=LI22&wiselog=C_B_6_1"
+                >
+                  <img src="images/link4.jpg" alt="Treasure Hunter" />
+                </a>
+                <button onclick="showAlertAndRedirect()">구매하기</button>
+              </div>
+              <div class="game-set">
+                <a
+                  href="https://dhlottery.co.kr/gameInfo.do?method=lottoMainView&lottoId=LI23&wiselog=C_B_7_1"
+                >
+                  <img src="images/link6.jpg" alt="Catch Me" />
+                </a>
+                <button onclick="showAlertAndRedirect()">구매하기</button>
+              </div>
+              <div class="game-set">
+                <a
+                  href="https://dhlottery.co.kr/gameInfo.do?method=lottoMainView&lottoId=LD20&wiselog=C_B_8_1"
+                >
+                  <img src="images/link8.jpg" alt="Double Jack Midas" />
+                </a>
+                <button onclick="showAlertAndRedirect()">구매하기</button>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="digital-money">
+          <img
+            src="images/실시간_누적_당첨금.png"
+            alt="실시간 1등 누적 당첨금"
+          />
+        </section>
+      </main>
+      <!-- 마지막 섹션 -->
+      <main class="final-container">
+        <section class="final-notice">
+          <a href="https://dhlottery.co.kr/service.do?method=noticeList">
+            <img src="./images/notcie.png" alt="Your Image Description" />
+          </a>
+        </section>
+        <section class="final-money">
+          <section class="final-money-1">
+            <img src="images/복권기금_누적액.png" alt="복권기금 누적액" />
+            <a
+              href="https://dhlottery.co.kr/happy.do?method=fundInfo&wiselog=C_C_2_1"
+              class="overlay-text"
+              >복권기금 알아보기</a
+            >
+          </section>
+          <section class="final-money-2">
+            <a
+              href="https://dhlottery.co.kr/user.do?method=login&returnUrl=/myPage.do?method=joinNewsLetterInput"
+            >
+              <img src="images/행복더하기_신청.png" alt="행복 더하기 신청" />
+            </a>
+          </section>
+        </section>
+        <section class="final-link">
+          <section class="final-link-cafe">
+            <a href="https://cafe.naver.com/dhlottery" target="_blank">
+              <img src="images/empty_cafe.png" alt="Cafe" class="img-tag" />
+            </a>
+          </section>
+          <section class="final-link-blog">
+            <a
+              href="https://blog.naver.com/donghanglottery1004"
+              target="_blank"
+            >
+              <img src="images/empty_blog.png" alt="Blog" class="img-tag" />
+            </a>
+          </section>
+          <section class="final-link-facebook">
+            <a href="https://www.facebook.com/donghanglottery/" target="_blank">
+              <img
+                src="images/empty_facebook.png"
+                alt="Facebook"
+                class="img-tag"
+              />
+            </a>
+          </section>
+          <section class="final-link-youtube">
+            <a
+              href="https://www.youtube.com/channel/UCEk3VwaA6e4H9TW1vSXOjDA/featured"
+              target="_blank"
+            >
+              <img
+                src="images/empty_youtube.png"
+                alt="YouTube"
+                class="img-tag"
+              />
+            </a>
+          </section>
+          <section class="final-link-news">
+            <a href="https://www.happyplus-dhlottery.co.kr/" target="_blank">
+              <img
+                src="images/empty_newsletter.png"
+                alt="Newsletter"
+                class="img-tag"
+              />
+            </a>
+          </section>
+          <section class="final-link-app">
+            <a
+              href="https://dhlottery.co.kr/counsel.do?method=mobileLotto"
+              target="_blank"
+            >
+              <img src="images/empty_app.png" alt="App" class="img-tag" />
+            </a>
+          </section>
+        </section>
+        <section class="final-stop">
+          <a href="https://dhlottery.co.kr/myPage.do?method=campainTest">
+            <img src="images/동행클린센터.png" alt="동행 클린 센터" />
+          </a>
+        </section>
+      </main>
+      <main>
+        <section class="certification-links">
+          <a href="http://www.bokgwon.go.kr/main.do" target="_blank"
+            ><img src="images/img_link1.gif" alt="Certification 1"
+          /></a>
+          <a href="https://www.ngcc.go.kr/" target="_blank"
+            ><img src="images/img_link2.gif" alt="Certification 2"
+          /></a>
+          <a href="https://www.kcgp.or.kr/portal/main/main.do" target="_blank"
+            ><img src="images/img_link3.gif" alt="Certification 3"
+          /></a>
+          <a href="https://www.world-lotteries.org/" target="_blank"
+            ><img src="images/img_link4.gif" alt="Certification 4"
+          /></a>
+          <a href="https://www.asiapacific-lotteries.com/" target="_blank"
+            ><img src="images/img_link5.gif" alt="Certification 5"
+          /></a>
+        </section>
+      </main>
+    </main>
+    <footer class="custom-footer">
+      <div class="footer-top">
+        <nav>
+          <a
+            href="https://dhlottery.co.kr/clause.do?method=footerUseClause&wiselog=F_A_1_1"
+            >이용약관</a
+          >
+          ·
+          <a
+            href="https://dhlottery.co.kr/clause.do?method=footerPrivate&wiselog=F_A_1_2"
+            style="font-weight: bold"
+            >개인정보 처리방침</a
+          >
+          ·
+          <a
+            href="javascript:void(0);"
+            style="font-weight: bold"
+            onclick="openSmallWindow()"
+            >인쇄복권점검지급기준</a
+          >
+
+          ·
+          <a
+            href="https://dhlottery.co.kr/user.do?method=login&returnUrl=%2Fclause.do%3Fmethod%3DreportCenterList"
+            >불법사항행위신고센터</a
+          >
+          ·
+          <a
+            href="https://dhlottery.co.kr/company.do?method=footerInfo&wiselog=F_A_1_5"
+            >수탁사업자소개</a
+          >
+          ·
+          <a href="javascript:void(0);" onclick="openEnglishWindow()"
+            >ENGLISH</a
+          >
+        </nav>
+      </div>
+
+      <div class="footer-info">
+        <!-- 왼쪽: 로고 및 버튼 -->
+        <div class="footer-left">
+          <img
+            src="images/logo_footer.png"
+            alt="동행복권 로고"
+            class="footer-logo"
+          />
+          <button class="info-button" onclick="openBizInfo()">
+            사업자정보확인
+          </button>
+        </div>
+
+        <!-- 오른쪽: 회사 정보 -->
+        <div class="footer-right">
+          <div class="company-info">
+            <p>
+              수탁사업자 (주)동행복권 주소 : 06719 서울 서초구 남부순환로 2423
+              한원빌딩 4층 고객문의 1588-6450 FAX 02-6933-3063
+            </p>
+            <p>
+              대표자 : 홍덕기 사업자등록번호 866-87-00833 통신판매사업자번호 :
+              제2018 - 서울서초 - 2075호
+            </p>
+            <p>
+              본 홈페이지는 게시된 이메일 주소가 자동 수집되는 것을 거부하며,
+              이를 위반시 정보통신망법에 의해 처벌됨을 유념하여 주시길 바랍니다.
+              19세 미만일 경우 「복권 및 복권기금법」에 따라 복권을 구매할 수
+              없습니다.
+            </p>
+            <p>
+              본 사이트는 Internet Explorer 11, Edge, Chrome, Safari 브라우저에
+              최적화되어 있습니다.
+            </p>
+            <p>Copyright (c) 2018 복권위원회&동행복권. All rights reserved</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 인증 배너 이미지 -->
+      <div class="certification-banner">
+        <img src="images/certified_mark1.png" alt="인증 마크 배너" />
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  let currentImageIndex = 0;
+  const totalImages = 5; // 총 이미지 개수
+
+  function updateCarousel() {
+    const carouselWrapper = document.querySelector(".carousel-wrapper");
+    carouselWrapper.style.transform = `translateX(-${
+      currentImageIndex * 100
+    }%)`;
+  }
+
+  function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % totalImages;
+    updateCarousel();
+  }
+
+  function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+    updateCarousel();
+  }
+
+  // 초기 설정 - 이미지와 링크들을 carousel-wrapper 안에 추가
+  window.onload = function () {
+    const imageLinks = [
+      "https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1",
+      "https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1",
+      "https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1",
+      "https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1",
+      "https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1",
+    ];
+
+    const imageSrcs = [
+      "images/spitto_1.png",
+      "images/spitto_2.png",
+      "images/spitto_3.png",
+      "images/spitto_4.png",
+      "images/spitto_5.png",
+    ];
+
+    const carouselWrapper = document.querySelector(".carousel-wrapper");
+    carouselWrapper.innerHTML = imageLinks
+      .map(
+        (link, index) =>
+          `<a href="${link}"><img src="${imageSrcs[index]}" alt="복권 이미지 ${
+            index + 1
+          }" /></a>`
+      )
+      .join("");
+    updateCarousel();
+  };
+
+  let currentPensionImageIndex = 0;
+  const pensionImages = [
+    "images/연금복권_231.png",
+    "images/연금복권_232.png",
+    "images/연금복권_233.png",
+    "images/연금복권_234.png",
+    "images/연금복권_235.png",
+    "images/연금복권_236.png",
+  ];
+
+  function updatePensionImage() {
+    const pensionImageElement = document.getElementById(
+      "pension-carousel-image"
+    );
+    pensionImageElement.src = pensionImages[currentPensionImageIndex];
+  }
+
+  function nextPensionImage() {
+    currentPensionImageIndex =
+      (currentPensionImageIndex + 1) % pensionImages.length;
+    updatePensionImage();
+  }
+
+  function prevPensionImage() {
+    currentPensionImageIndex =
+      (currentPensionImageIndex - 1 + pensionImages.length) %
+      pensionImages.length;
+    updatePensionImage();
+  }
+
+  let currentLottoImageIndex = 0;
+  const lottoImages = [
+    "images/lotto_1137.png",
+    "images/lotto_1138.png",
+    "images/lotto_1139.png",
+    "images/lotto_1140.png",
+    "images/lotto_1141.png",
+    "images/lotto_1142.png",
+    "images/lotto_1143.png",
+    "images/lotto_1144.png",
+  ];
+
+  function updateLottoImage() {
+    const lotteryImageElement = document.getElementById(
+      "lottery-carousel-image"
+    );
+    lotteryImageElement.src = lottoImages[currentLottoImageIndex];
+  }
+
+  function nextLottoImage() {
+    currentLottoImageIndex = (currentLottoImageIndex + 1) % lottoImages.length;
+    updateLottoImage();
+  }
+
+  function prevLottoImage() {
+    currentLottoImageIndex =
+      (currentLottoImageIndex - 1 + lottoImages.length) % lottoImages.length;
+    updateLottoImage();
+  }
+
+  function showAlertAndRedirect() {
+    alert("로그인 후 사용 해주시기 바랍니다.");
+    window.location.href =
+      "https://dhlottery.co.kr/user.do?method=login&returnUrl=%2FgameInfo.do%3Fmethod%3DlottoMainView%26lottoId%3DLD14";
+  }
+  function openSmallWindow() {
+    window.open(
+      "https://dhlottery.co.kr/jspcall.do?method=call&url=gameResult/paymentStandard720",
+      "_blank",
+      "width=820,height=700"
+    );
+  }
+  function openEnglishWindow() {
+    window.open(
+      "https://dhlottery.co.kr/en/html/Introduction.html",
+      "_blank",
+      "width=1262,height=1236"
+    );
+  }
+  function openBizInfo() {
+    window.open(
+      "https://www.ftc.go.kr/bizCommPop.do?wrkr_no=8668700833&apv_perm_no=",
+      "BizInfoPopup",
+      "width=600,height=600,scrollbars=yes"
+    );
+  }
+</script>
