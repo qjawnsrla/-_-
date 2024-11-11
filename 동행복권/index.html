@@ -16,7 +16,7 @@
           </a>
         </div>
         <div class="user-links">
-          <button class="btn login-btn">로그인</button>
+          <a href="login.html" class="btn login-btn">로그인</a>
           <a
             href="https://dhlottery.co.kr/loginJoin.do?method=joinFormAgree"
             class="btn signup-btn"
@@ -532,7 +532,7 @@
 
 <script>
   let currentImageIndex = 0;
-  const totalImages = 5; // 총 이미지 개수
+  const totalImages = 5;
 
   function updateCarousel() {
     const carouselWrapper = document.querySelector(".carousel-wrapper");
@@ -551,7 +551,6 @@
     updateCarousel();
   }
 
-  // 초기 설정 - 이미지와 링크들을 carousel-wrapper 안에 추가
   window.onload = function () {
     const imageLinks = [
       "https://dhlottery.co.kr/gameResult.do?method=speettoWin&lottoId=SP1000&wiselog=C_A_3_1",
